@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Saudi Arabia MERS Cases</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Saudi Arabia MERS Cases</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#countries-that-have-experienced-more-than-5-cases">Countries that have experienced more than 5 cases:</a></li>
+<li><a href="#focus-on-saudi-arabia">Focus on Saudi Arabia:</a></li>
+<li><a href="#monthly-data">Monthly data</a></li>
+<li><a href="#final-probabilities">Final Probabilities</a></li>
+</ul>
+</div>
+
+<div id="countries-that-have-experienced-more-than-5-cases" class="section level2">
+<h2>Countries that have experienced more than 5 cases:</h2>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="focus-on-saudi-arabia" class="section level2">
+<h2>Focus on Saudi Arabia:</h2>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<div id="daily-probability-distribution" class="section level3">
+<h3>Daily probability distribution</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="proportion-of-days-greater-than-0" class="section level3">
+<h3>Proportion of days greater than 0:</h3>
+<pre><code>##   totPos percentage
+## 1    608  0.3000987</code></pre>
+</div>
+</div>
+<div id="monthly-data" class="section level2">
+<h2>Monthly data</h2>
+<p>Aggregate by month and look for seasonality:</p>
+<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" width="672" /><img src="index_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
+<pre><code>##    month monthyContrib
+## 1      1    -7.3705436
+## 2      2     8.0549270
+## 3      3     4.2328344
+## 4      4    14.8107462
+## 5      5     9.7043330
+## 6      6     0.2203503
+## 7      7    -9.8756246
+## 8      8     9.6950922
+## 9      9    -8.0183300
+## 10    10    -3.8983981
+## 11    11    -6.6512653
+## 12    12   -10.9041274</code></pre>
+<div id="monthly-density" class="section level3">
+<h3>Monthly Density</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<pre><code>## [1] &quot;Negative Binomial AIC: 519.509489693452&quot;</code></pre>
+<pre><code>## [1] &quot;Poisson AIC: 1961.14826259532&quot;</code></pre>
+</div>
+<div id="negative-binomial" class="section level3">
+<h3>Negative binomial</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" width="672" /><img src="index_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
+</div>
+<div id="model-probabilities---unconditional" class="section level3">
+<h3>Model probabilities - unconditional</h3>
+<pre><code>##          Threshold     Probs
+## 1      Less than 3 0.2490578
+## 2 Between 3 and 17 0.4107913
+## 3     More than 17 0.3401508</code></pre>
+</div>
+<div id="time-series-model-time-series-glm-and-arima-arima-not-a-good-model-for-count-data" class="section level3">
+<h3>Time series model: time series GLM and ARIMA (ARIMA not a good model for count data)</h3>
+<pre><code>##          Threshold countProbs arimaProbs
+## 1      Less than 3     0.3302     0.2354
+## 2 Between 3 and 17     0.4286     0.4256
+## 3     More than 17     0.2412     0.3390</code></pre>
+</div>
+<div id="fit-conditional-on-season" class="section level3">
+<h3>Fit conditional on season</h3>
+<p>Months 3, 4, and 5 = high All others = low</p>
+<pre><code>## # A tibble: 2 x 5
+##   highLow       mu      size     muSD    sizeSD
+##     &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+## 1    High 26.50000 0.8879916 7.147244 0.2915639
+## 2     Low 15.07843 0.5898297 2.802464 0.1177074</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+</div>
+</div>
+<div id="final-probabilities" class="section level2">
+<h2>Final Probabilities</h2>
+<pre><code>##          Threshold     Probs
+## 1      Less than 3 0.1258650
+## 2 Between 3 and 17 0.3775368
+## 3     More than 17 0.4965982</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
